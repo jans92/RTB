@@ -1,0 +1,805 @@
+html{
+  background-image: url("../images/portada.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  
+
+}
+
+/* TIPOS DE LETRAS USADAS */
+@font-face {
+  font-family: miletra;
+  src: url(../fonts/Pacifico.ttf);
+}
+
+@font-face {
+  font-family: nombre;
+  src: url(../fonts/Impactlabel.ttf);
+}
+
+@font-face {
+  font-family: letra2;
+  src: url(../fonts/edosz.ttf);
+}
+/*____________________________________________*/
+
+/* ESTO ES LA IMAGEN DE LA CABECERA*/
+#logo {
+  width: 65%;
+  float: left;
+  margin-left: 15%;
+  margin-top:3em;
+ 
+
+}
+
+
+/*_________________________________________*/
+
+/* ____________________MENU NAVEGACION____________________ */
+nav {
+  font-family: miletra;
+}
+
+ol li.m {
+  float: left;
+}
+
+ol li div.m {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;  display: inline;
+
+font-family: miletra;
+list-style: none;
+padding-left: 4em;
+}
+#botones li {
+  display: inline;
+
+}
+ol li div.m:hover{
+color:orange;
+}
+
+#ol #menuadmin{
+  display: inline;
+}
+#menuadmin li {
+  display: inline;
+
+}
+
+#ol #menuuser{
+  display: inline;
+}
+#menuuser li {
+  display: inline;
+
+}
+
+.sesion {
+
+  display: inline;
+  color: black;
+  font-family: miletra;
+  list-style: none;
+  margin-left: 3em;
+  margin-bottom: 2%;
+  margin-left: 20em;
+
+}
+
+.sesion a:hover{
+  color: orange;
+}
+
+ol li a {
+  color: black;
+  font-family: miletra;
+  text-decoration: none;
+  padding: 4em;
+  margin-left: 3em;
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
+
+ol {
+  list-style: none;
+  margin-bottom: 3%;
+}
+
+ol li a:hover {
+  color: orange;
+}
+
+/*___________________MENU BARRA EXPANDIBLE BURGER EN EL NAV_______________________ */
+.barrasmenu {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  cursor: pointer;
+
+}
+
+.barrasmenu.on .one {
+  -moz-transform: rotate(45deg) translate(7px, 7px);
+  -ms-transform: rotate(45deg) translate(7px, 7px);
+  -webkit-transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.barrasmenu.on .two {
+  opacity: 0;
+}
+
+.barrasmenu.on .three {
+  -moz-transform: rotate(-45deg) translate(8px, -10px);
+  -ms-transform: rotate(-45deg) translate(8px, -10px);
+  -webkit-transform: rotate(-45deg) translate(8px, -10px);
+  transform: rotate(-45deg) translate(8px, -10px);
+}
+
+/*MENU EXPANDIBLE DE EL MENU BURGER */
+.menu-section.on {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top:0;
+
+}
+
+
+
+.one,
+.two,
+.three {
+  width: 100%;
+  height: 5px;
+  background: black;
+  margin: 6px auto;
+  backface-visibility: hidden;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  font-family: Open Sans;
+  list-style: none;
+  margin: 4em auto;
+
+  text-align: center;
+}
+
+nav ul.hidden {
+  display: none;
+}
+
+nav ul a {
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  line-height: 1.5;
+  width: 100%;
+  display: block;
+  font-family: chilanka;
+}
+
+
+nav ul a:hover {
+  color: rgba(54, 53, 53, 0.5);
+}
+
+/*_________________________________*/
+
+/*IDIOMAS*/
+nav #idiomas.hidden {
+  text-align: center;
+  padding: 2em;
+  width: 33%;
+}
+
+nav #idiomas a {
+  width: 20%;
+  display: inline-block;
+}
+
+#idiomas {
+  color: white;
+  display: inline-block;
+}
+
+/*____________________________________________*/
+
+
+/*_______TODO LO DEL FORMULARIO__________ */
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=password2], textarea {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 8px 26px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+
+}
+#contador{
+  
+  padding: 12px 20px;
+  margin: 8px 26px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+/* BOTONES ESTILO*/
+button {
+  background-color: rgb(117, 116, 116);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 26px;
+  border: none;
+  cursor: pointer;
+  width: 90%;
+  font-size: 20px;
+  font-family: miletra;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* CENTRAR LA IMAGEN EN EL CONTAINER */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+
+/* .avatar {               /* NO BORREIS ES UN ICONO PARA PONER A LA VENTANA DE REGISTRO E INICIO*/
+/* width: 200px;
+height:200px;
+  border-radius: 50%;
+} 
+*/
+
+textarea {
+  resize: none;
+ 
+}
+
+/* EL BOTON DE CERRAR LA VENTANA MODAL */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* VENTANA MODAL */
+.ventana-modal {
+  top: 7%;
+  left: 10%;
+  position: absolute;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  z-index: 999;
+}
+
+/*_____________________________________________________________ */
+
+
+
+/* LOS SECTIONS DIFERENTES */
+.blog {
+  color: black;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+
+}
+
+.recursos {
+  color: black;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+}
+
+.tutoriales {
+  color: black;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+}
+
+/*___________________________________________*/
+
+/* EL FOOTER*/
+.pie {
+  font-family: miletra;
+  position: fixed;
+  right: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  color: black;
+  padding: 1rem;
+  height: 1em;
+}
+
+/*________________________________________________*/
+
+/*TUTORIALES*/
+/*Controles para los videos de tutoriales*/
+#reproductor{
+  width: 640px;
+  height: 360px;
+  float: left;
+  border: solid black 3px;
+  margin-left: 2%;
+}
+
+#informacion{
+  width: 300px;
+  border: double black 3px;
+  position: absolute;
+  margin-top: 390px;
+  margin-left: 200px;
+  text-align: center;
+ 
+}
+#controles{
+  width: 250px;
+  height: 300px;
+  float: left;
+  margin-left: 400px;
+  color: black;
+  border: solid black 4px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: white;
+  box-shadow:5px 10px black; 
+  
+  
+}
+
+#barra{
+background: #FFF;
+width: 240px;
+height: 16px;
+border:1px solid black;
+padding: 3px;
+border-radius: 10px 10px 10px 10px;
+
+}
+
+#progreso{
+background-color: orange;
+width: 0px;
+height: 16px;
+border-radius: 3px 3px 3px 3px;
+}
+
+
+ul{
+list-style: none;
+}
+a{
+color:black;
+
+}
+
+/*____________________________________________________*/
+/*BLOG*/
+/*Entradas de los post*/
+
+.entradas {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+  float: left;
+  margin-left: 5em;
+  
+
+}
+
+.listadePost{
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 1px solid #eee;
+  padding: 0.4em 0;
+  font-size: 80%;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  margin-left: 8em;
+}
+.listadePost1{ /*para comentarios*/
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 1px solid #eee;
+  padding: 0.4em 0;
+  font-size: 80%;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  margin-top:-2%;
+  margin-left: 0%;
+}
+
+ 
+
+.numerodepost{
+  padding: 10px 20px;
+  margin: 20px 0;
+  border-left: 1px solid #EEE;
+
+}
+
+.numerodepost2{
+  padding: 10px 20px;
+ 
+  border-left: 1px solid #EEE;
+
+}
+
+
+.descripcion{
+  margin-left: 5%;
+  
+}
+
+
+.encabezado {
+  width:70%;
+  margin-left: 5%;
+  border-bottom: 2px solid #000;
+  
+}
+
+
+.titulo {
+  font-size: 2em;
+  color: #222;
+  margin-bottom: 0.2em;
+  font-weight: bold;
+}
+
+.categoria {
+  margin: 0 0.1em;
+  padding: 0.3em 1em;
+  color: #fff;
+  background: #000;
+  font-size: 80%;
+  text-decoration: none;
+}
+.listadecategoria {
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 1px solid #eee;
+  padding: 0.4em 0;
+  font-size: 110%;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+
+.postMas{
+  text-transform: uppercase;
+  border: 1px solid #000;
+  padding: 2px 8px;
+  margin: 0;
+}
+/* MENU categorias*/
+
+#categorialista {
+	padding:0;
+	margin:0;
+  max-width:200px;
+  height: 100%;
+  float: right;
+  display: inline-block;
+  margin-right: 5em;
+  margin-top: 5em;
+ 
+
+}
+
+
+
+#categorialista li {
+	list-style:none;
+	color:black;
+	font-family:sans-serif;
+	text-transform:uppercase;
+	padding:15px 0;
+	position:relative;
+	margin-bottom:10px;
+	opacity:0.7;
+	cursor:pointer;
+	font-weight:700;
+	letter-spacing:2px;
+	font-size:13px;
+	line-height:1.3em;
+	text-align:right;
+	transition:all ease 0.2s;
+}
+
+#categorialista li:hover {
+  font-size:13px;
+  color:orange;
+}
+
+#categorialista a {
+	text-decoration:none;
+  /* color:rgb(83, 23, 23); */
+  text-transform: uppercase;
+  color: rgb(77, 75, 75);
+  border-bottom: 1px solid #eee;
+  padding: 0.4em 0;
+  font-size: 110%;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+#categorialista li a:after {
+	content: " ";
+	background: rgb(90, 188, 218);
+	width: 0%;
+	height: 2px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+  transition:all ease 0.4s;
+  
+}
+
+
+#categorialista li:hover a:after {
+	width:100%;
+	width:60%;
+}
+
+#categorialista li.active {
+	opacity:1;
+}
+
+#categorialista li.active a:after {
+	content: " ";
+	background: orange;
+	width: 100%;
+	height: 2px;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+/*cerrar session mas lejos*/
+#cerrarsession_m{
+  margin-left: 28em;
+  padding:0;
+}
+
+#titulo{
+  font-size:25px;
+}
+
+.categoria{
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  /* margin-right: 15px; */
+  margin-left: 27px;
+}
+
+/* tu cuenta registrado*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  padding: 5%;
+  width: 13%;
+  background-color: #fff;
+margin-bottom:1em;
+margin-left:40%;
+margin-top:3%;
+}
+
+.title {
+color: grey;
+font-size: 18px;
+}
+
+h4 b {
+  color:orange;
+}
+/* cajas de blog*/
+#card1 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: auto;
+  padding: 5%;
+  width: 80%;
+  background-color: white;
+margin-bottom:1em;
+}
+.card2 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: auto;
+  padding: 5%;
+  width: 100%;
+  background-color: WHITE;
+margin-bottom:1em;
+  margin-right: -15%;
+  
+}
+
+.card3 {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin: auto;
+  padding: 5%;
+  width: 80%;
+  background-color: WHITE;
+margin-bottom:1em;
+margin-left:0%;
+
+}
+
+#card4 {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  margin-left:3%;
+  padding: 5%;
+  width: 76%;
+  background-color: white;
+margin-bottom:1em;
+}
+/*estilos ususario contador*/
+#usuarioslista {
+	padding:0;
+	margin:0;
+  max-width:200px;
+  
+  float: right;
+  display: inline-block;
+  margin-right: 5em;
+  margin-top: 5em;
+  border-bottom: 1px solid #eee;
+ 
+}
+.contador {
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 1px solid #eee;
+  padding: 0.4em 0;
+  font-size: 110%;
+  font-weight: 500;
+ 
+  
+}
+/*NOTICIAS USUARIO*/
+#noticiaslista {
+	padding:0;
+	margin:0;
+  max-width:200px;
+  
+  float: right;
+  display: inline-block;
+  margin-right: 5em;
+  margin-top: 5em;
+  border-bottom: 1px solid #eee;
+ 
+}
+.contadornoticias {
+  text-transform: uppercase;
+  color: black;
+  border-bottom: 1px solid #eee;
+  padding: 0.4em 0;
+  font-size: 110%;
+  font-weight: 500;
+ 
+}
+.contadornumero{
+  color:orange; 
+  display:inline;
+ padding-left: 1%;
+}
+
+/*buscar texto en comentarios*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300,300italic);
+
+body{
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.controls{
+	width: 100%;
+}
+
+#search{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-size: 1em;
+	font-weight: 300;
+	padding: 5px;
+	width: 40%;
+}
+
+#button{
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-size: 1em;
+	font-weight: 300;
+	padding: 5px;
+}
+
+
+#results {
+	color: #8a0000;
+	margin-top: -2%;
+  font-size: 12px;
+  margin-left: 20px;
+}
+
+
+img.image{
+	margin: 0 20px 20px 0;
+}
+
+span.finded{
+	background: #F00;
+  color: #FFF;
+}
